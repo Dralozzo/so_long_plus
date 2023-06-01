@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:06:31 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/06/01 18:46:08 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/01 20:44:17 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,7 @@ void	game_set(t_game *game)
 	game->enemy.x = 0;
 	game->enemy.y = 0;
 	game->enemy_frame = 1;
-	game->tlp_x1 = 0;
-	game->tlp_y1 = 0;
-	game->tlp_x2 = 0;
-	game->tlp_y2 = 0;
-	game->tlp_x3 = 0;
-	game->tlp_y3 = 0;
-	game->tlp_x4 = 0;
-	game->tlp_y4 = 0;
-	game->tlp_x5 = 0;
-	game->tlp_y5 = 0;
-	game->tlp_x6 = 0;
-	game->tlp_y6 = 0;
-	game->tlp_x7 = 0;
-	game->tlp_y7 = 0;
+	tlp_set(game);
 }
 
 void	set_window(t_game *game)
