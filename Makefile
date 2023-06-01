@@ -6,7 +6,7 @@
 #    By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 16:02:03 by lnicoter          #+#    #+#              #
-#    Updated: 2023/05/22 23:03:23 by lnicoter         ###   ########.fr        #
+#    Updated: 2023/05/30 16:42:54 by lnicoter         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SOURCES_FILES	=	main.c check_things.c checkmap.c draw_map.c enemy_mv.c \
 					./player_settings/player_mv_settings_down.c \
 					./player_settings/player_mv_settings_left.c \
 					./player_settings/player_mv_settings_right.c \
+					tlp_behaviour.c \
 
 HEADER			=	./so_long.h
 
@@ -33,20 +34,20 @@ CC				=	gcc
 
 RM				=	rm -f
 
-#MLX				=	./libmlx.dylib
+MLX				=	./libmlx.dylib
 
 
 CFLAGS			=	-Wall -Wextra -Werror -g
 
 %.o: %.c
-	$(CC) ${CFLAGS} -I/usr/include -Imlx_linux -O3 -c $< -o $@
+	$(CC) ${CFLAGS} -Imlx -c $< -o $@
 
 all:			$(NAME)
 
 $(NAME):	$(OBJECTS) $(LIBFT)
 				make -C $(FT_PRINTF_PATH)
 				make -C $(LIBFT_PATH)
-				$(CC) $(OBJECTS) $(LIBFT)/libft.a $(FT_PRINTF)/libftprintf.a  -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
+				$(CC) $(OBJECTS) $(LIBFT)/libft.a $(FT_PRINTF)/libftprintf.a -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
 
 
 clean:

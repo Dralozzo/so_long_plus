@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 11:25:28 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/05/22 23:10:44 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:45:23 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 
 int	key_pressed(int keycode, t_game *game)
 {
-	if (keycode == 65307)
+	if (keycode == 53)
 	{
 		mlx_destroy_window(game->mlx, game->win);
 		free_map(game);
 		exit(1);
 	}
-	if (keycode == 119 || keycode == 65362)
+	if (keycode == 13 || keycode == 126)
 		game->mv_count += up(game);
-	if (keycode == 97 || keycode == 65361)
+	if (keycode == 0 || keycode == 123)
 		game->mv_count += left(game);
-	if (keycode == 115 || keycode == 65364)
+	if (keycode == 1 || keycode == 125)
 		game->mv_count += down(game);
-	if (keycode == 100 || keycode == 65363)
+	if (keycode == 2 || keycode == 124)
 		game->mv_count += right(game);
 	draw_map(game);
-	printf("key premuta %d\n",keycode);
 	return (0);
 }
 

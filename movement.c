@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 21:46:08 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/03/14 16:24:44 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/05/31 15:36:12 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ int	up(t_game *game)
 	{
 		check_death(game);
 	}
+	else if(game->map[game->player_stats.x - 1][game->player_stats.y] == TLP)
+	{
+		tlp_behaviour(game, game->player_stats.x - 1, game->player_stats.y);
+	}
 	return (1);
 }
 
@@ -60,6 +64,10 @@ int	left(t_game *game)
 			ENEMY_S)
 	{
 		check_death(game);
+	}
+	else if(game->map[game->player_stats.x][game->player_stats.y - 1] == TLP)
+	{
+		tlp_behaviour(game, game->player_stats.x, game->player_stats.y - 1);
 	}
 	return (1);
 }
@@ -87,6 +95,10 @@ int	down(t_game *game)
 	{
 		check_death(game);
 	}
+	else if(game->map[game->player_stats.x + 1][game->player_stats.y] == TLP)
+	{
+		tlp_behaviour(game, game->player_stats.x + 1, game->player_stats.y);
+	}
 	return (1);
 }
 
@@ -112,6 +124,10 @@ int	right(t_game *game)
 			ENEMY_S)
 	{
 		check_death(game);
+	}
+	else if(game->map[game->player_stats.x][game->player_stats.y + 1] == TLP)
+	{
+		tlp_behaviour(game, game->player_stats.x, game->player_stats.y + 1);
 	}
 	return (1);
 }

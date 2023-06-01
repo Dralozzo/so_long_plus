@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 16:09:07 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/05/22 23:05:30 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/03/15 18:26:26 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ char	**read_map(char *file, t_game *game)
 {
 	char		*stringona;
 	int			fd;
-	int			flag_read;
 
 	if (argv_check(file) != 1)
 	{
@@ -41,9 +40,7 @@ char	**read_map(char *file, t_game *game)
 	}
 	stringona = malloc(sizeof(char) * 10000000);
 	fd = open(file, O_RDONLY);
-	flag_read = read(fd, stringona, 10000000);
-	if (!flag_read)
-		exit(0);
+	read(fd, stringona, 10000000);
 	game->map = ft_split(stringona, '\n');
 	close(fd);
 	free(stringona);

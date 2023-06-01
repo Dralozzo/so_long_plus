@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 18:40:24 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/03/15 19:21:27 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:47:42 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,4 @@ void	check_exit_right(t_game *game)
 	game->map[game->player_stats.x][game->player_stats.y] = '0';
 	ft_printf("You win\n");
 }
+

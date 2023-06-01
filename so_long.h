@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:21:42 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/05/22 23:06:40 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:46:03 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 # include <mlx.h>
 # include "libftmio/libft.h"
 # include "ft_printfmio/ft_printf.h"
-# define FRAME1 50
-# define FRAME2 100
-# define FRAME3 150
+# define FRAME1 15
+# define FRAME2 30
+# define FRAME3 50
 
 typedef enum s_tiletype
 {
@@ -33,7 +33,8 @@ typedef enum s_tiletype
 	PLAYER = 'P',
 	COLLECTIBLE = 'C',
 	EXIT = 'E',
-	ENEMY_S = 'S'
+	ENEMY_S = 'S',
+	TLP = 'T'
 }	t_tiletype;
 
 typedef struct s_tile_c
@@ -74,12 +75,15 @@ typedef struct s_game
 {
 	void		*mlx;
 	void		*win;
+	//immmagini
 	void		*img_0;
 	void		*img_wall;
 	void		*img_exit;
 	void		*img_collect;
 	void		*img_enemy;
 	void		*img_player;
+	void		*img_tlp;
+	void		*bows_tlp;
 	int			collect;
 	t_player	player_stats;
 	t_enemy		enemy;
@@ -100,6 +104,21 @@ typedef struct s_game
 	int			enemy_frame;
 	int			x;
 	int			y;
+	//so_long+
+	int			tlp_x1;
+	int			tlp_y1;
+	int			tlp_x2;
+	int			tlp_y2;
+	int			tlp_x3;
+	int			tlp_y3;
+	int			tlp_x4;
+	int			tlp_y4;
+	int			tlp_x5;
+	int			tlp_y5;
+	int			tlp_x6;
+	int			tlp_y6;
+	int			tlp_x7;
+	int			tlp_y7;
 }	t_game;
 
 void	check_all(t_game *game);
@@ -148,4 +167,8 @@ void	free_map(t_game *game);
 void	check_not_tile(t_game *game);
 void	choose_frame(t_game *game);
 int		animation_loop(t_game *game);
+
+//so_long+
+void	set_tlp(t_game *game, int riga, int colonna);
+void	tlp_behaviour(t_game *game, int plx, int ply);
 #endif

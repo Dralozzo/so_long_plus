@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:10:39 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/03/15 19:39:59 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/05/31 15:42:32 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,8 @@ void	check_not_tile(t_game *game)
 		{
 			if (game->map[i][j] != EMPTY && game->map[i][j] != PLAYER
 				&& game->map[i][j] != EXIT && game->map[i][j] != COLLECTIBLE
-				&& game->map[i][j] != ENEMY_S && game->map[i][j] != WALL)
+				&& game->map[i][j] != ENEMY_S && game->map[i][j] != WALL
+				&& game->map[i][j] != TLP)
 			{
 				ft_printf("Error\n you set a tile that is not correct\n");
 				free_map(game);
