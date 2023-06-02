@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 15:41:21 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/06/02 19:17:58 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/02 22:01:28 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	tlp_set(t_game *game)
 	game->tlp_y5 = 0;
 	game->tlp_x6 = 0;
 	game->tlp_y6 = 0;
-	//game->tlp_x7 = 0;
-	///game->tlp_y7 = 0;
+	game->tlp_x7 = 0;
+	game->tlp_y7 = 0;
 }
 
 void	tlp_behaviour(t_game *game, int plx, int ply)
@@ -80,16 +80,16 @@ void	tlp_brhaviour3(t_game *game, int plx, int ply)
 	if ((game->tlp_x6 == plx) && (game->tlp_y6 == ply))
 	{
 		game->map[game->player_stats.x][game->player_stats.y] = '0';
-		game->map[game->tlp_x5][game->tlp_y5 + 1] = 'P';
+		game->map[game->tlp_x7][game->tlp_y7 + 1] = 'P';
 		game->player_stats.x = game->tlp_x5;
 		game->player_stats.y = game->tlp_y5 + 1;
 	}
-	/*else if ((game->tlp_x7 == plx) && (game->tlp_y7 == ply))
+	else if ((game->tlp_x7 == plx) && (game->tlp_y7 == ply))
 	{
 		game->map[game->player_stats.x][game->player_stats.y] = '0';
 		game->map[game->tlp_x1][game->tlp_y1 + 1] = 'P';
 		game->player_stats.x = game->tlp_x1;
 		game->player_stats.y = game->tlp_y1 + 1;
-	}*/
+	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:21:42 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/06/02 20:04:22 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/02 21:36:27 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,8 +171,9 @@ int		animation_loop(t_game *game);
 
 //so_long+
 void	set_tlp(t_game *game, int riga, int colonna);
-//void	set_tlp2(t_game *game, int riga, int colonna);
-//void	set_tlp3(t_game *game, int riga, int colonna);
+void	set_tlp2(t_game *game, int riga, int colonna);
+void	set_tlp3(t_game *game, int riga, int colonna);
+void	set_tlp3(t_game *game, int riga, int colonna);
 void	tlp_behaviour(t_game *game, int plx, int ply);
 void	tlp_set(t_game *game);
 void	tlp_behaviour2(t_game *game, int plx, int ply);
