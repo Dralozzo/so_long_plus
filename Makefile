@@ -6,7 +6,7 @@
 #    By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 16:02:03 by lnicoter          #+#    #+#              #
-#    Updated: 2023/05/30 16:42:54 by lnicoter         ###   ########.fr        #
+#    Updated: 2023/06/02 19:15:17 by lnicoter         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SOURCES_FILES	=	main.c check_things.c checkmap.c draw_map.c enemy_mv.c \
 					./player_settings/player_mv_settings_down.c \
 					./player_settings/player_mv_settings_left.c \
 					./player_settings/player_mv_settings_right.c \
-					tlp_behaviour.c \
+					tlp_behaviour.c set_tlp.c\
 
 HEADER			=	./so_long.h
 

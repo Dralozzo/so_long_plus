@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:06:31 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/06/01 20:44:17 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/02 20:04:36 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	game_set(t_game *game)
 	game->enemy.x = 0;
 	game->enemy.y = 0;
 	game->enemy_frame = 1;
+	game->insert_flag = 0;
 	tlp_set(game);
 }
 

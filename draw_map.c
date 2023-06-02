@@ -6,7 +6,7 @@
 /*   By: lnicoter <lnicoter@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 21:31:24 by lnicoter          #+#    #+#             */
-/*   Updated: 2023/06/01 20:34:16 by lnicoter         ###   ########.fr       */
+/*   Updated: 2023/06/02 19:42:49 by lnicoter         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	draw_map(t_game *game)
 			set_wcp(game, riga, colonna);
 			set_eenem(game, riga, colonna);
 			set_tlp(game, riga, colonna);
+			//set_tlp2(game, riga, colonna);
+			//set_tlp3(game, riga, colonna);
 			colonna++;
 		}
 		riga++;
